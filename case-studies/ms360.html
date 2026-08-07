@@ -973,6 +973,32 @@ footer.site-footer{
   html{scroll-behavior:auto;}
 }
 
+
+/* ---------- RESULTS BAND + RECOGNITION ---------- */
+.results-band{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1.5px;
+  background:var(--line-strong); border:1.5px solid var(--line-strong); margin-top:28px;
+}
+.rb-cell{background:var(--paper); padding:24px 22px;}
+.rb-fig{
+  font-family:'Archivo', sans-serif; font-weight:800; font-size:2.1rem;
+  letter-spacing:-0.02em; color:var(--accent); line-height:1; display:block;
+}
+.rb-cap{
+  font-family:'Inter', sans-serif; font-size:12.5px; color:var(--ink-soft);
+  margin-top:10px; display:block; line-height:1.45;
+}
+.recognition{
+  margin-top:28px; border:1.5px solid var(--line-strong); background:var(--paper-2);
+  padding:26px 28px;
+}
+.recognition .rc-tag{
+  font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.09em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:10px;
+}
+.recognition p{margin:0; font-size:0.97rem; color:var(--ink); line-height:1.6;}
+.recognition p + p{margin-top:12px; color:var(--ink-soft); font-size:0.9rem;}
+@media (max-width:640px){ .recognition{padding:20px 18px;} .rb-fig{font-size:1.8rem;} }
 </style>
 </head>
 <body>
@@ -1234,6 +1260,28 @@ footer.site-footer{
         <div class="impact-card"><span class="ic-label">Event governance</span><p>Structured definitions and severity mapping made incident triage manageable across thousands of assets.</p></div>
         <div class="impact-card"><span class="ic-label">Fleet visibility</span><p>Teams can proactively monitor fleet health and catch problems before they escalate.</p></div>
         <div class="impact-card"><span class="ic-label">Financial clarity</span><p>Executives get a consolidated, real-time view of billing and contract performance.</p></div>
+      </div>
+    </div>
+
+
+    <div class="cs-block reveal">
+      <span class="sub-label">Results</span>
+      <h2>What it added up to.</h2>
+      <p class="cs-lede">CC 360 and EMS shipped as one connected system. These are the programme-level numbers reported once the integrated platform was live across HP's customer base.</p>
+
+      <div class="results-band">
+        <div class="rb-cell"><span class="rb-fig">90%</span><span class="rb-cap">Investigation time saved, across ~170 customers onboarded</span></div>
+        <div class="rb-cell"><span class="rb-fig">98%</span><span class="rb-cap">Reduction in event noise reaching agents</span></div>
+        <div class="rb-cell"><span class="rb-fig">2.6M</span><span class="rb-cap">Events processed daily through the pipeline</span></div>
+        <div class="rb-cell"><span class="rb-fig">20+</span><span class="rb-cap">Data sources unified into a single pane of glass</span></div>
+        <div class="rb-cell"><span class="rb-fig">60+</span><span class="rb-cap">Features delivered, with &gt;90% of apps consolidated</span></div>
+        <div class="rb-cell"><span class="rb-fig">&gt;90%</span><span class="rb-cap">Adoption across the onboarded customer base</span></div>
+      </div>
+
+      <div class="recognition">
+        <span class="rc-tag">Recognition</span>
+        <p>The CC 360 &amp; EMS programme was formally recognised by HP leadership and customer teams for delivering unified, proactive fleet operations at scale — closed-loop automation that detects, enriches, acts on and closes events, built on reusable low-code templates extensible across MS, WXP, MDS and MCS.</p>
+        <p>Recognition was awarded to the full cross-functional programme team across PMO, engineering, DevOps and QA. I was named as part of that team for the design work on CC 360 and EMS.</p>
       </div>
     </div>
 
