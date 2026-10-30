@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parth Kumawat — Senior UX/UI Design Lead</title>
-<meta name="description" content="Senior UX/UI Design Lead with 7+ years in enterprise B2B design for HP, Ford, and the Salesforce ecosystem. Based in New Delhi.">
+<title>Parth Kumawat — Staff-level Product Designer, Enterprise B2B</title>
+<meta name="description" content="Staff-level product designer with 7 years on complex B2B portals for HP, Ford and the Salesforce ecosystem. Design systems built from scratch, zero-to-one product work, and an AI-assisted practice. Based in New Delhi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -44,6 +44,7 @@ h1,h2,h3,h4{
   font-family:'Archivo', sans-serif;
   font-weight:800;
   letter-spacing:-0.015em;
+  line-height:1.12;
   margin:0;
   color:var(--ink);
 }
@@ -231,11 +232,11 @@ h1.hero-title{
 section{padding:88px 0; border-bottom:1.5px solid var(--line-strong);}
 section:last-of-type{border-bottom:none;}
 .section-head{
-  display:flex; justify-content:space-between; align-items:flex-end;
-  gap:24px; margin-bottom:56px; flex-wrap:wrap;
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap:20px 48px; margin-bottom:56px; flex-wrap:wrap;
 }
 .section-head h2{font-size:clamp(1.8rem, 3.4vw, 2.6rem); max-width:16ch;}
-.section-head p{color:var(--ink-soft); max-width:42ch; margin:0; font-size:1.02rem;}
+.section-head p{color:var(--ink-soft); max-width:42ch; margin:0; font-size:1.02rem; padding-top:7px;}
 
 /* ---------- FILTER TAGS (Work page) ---------- */
 .filter-bar{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:44px;}
@@ -291,20 +292,21 @@ section:last-of-type{border-bottom:none;}
 .bento{
   display:grid; grid-template-columns:repeat(6,1fr);
   grid-template-areas:
-    "craft craft craft product product product"
-    "craft craft craft stat stat stat"
+    "craft craft ai ai product product"
     "research research research technical technical technical"
-    "now now now now now now";
+    "stat stat now now now now";
   gap:1.5px; background:var(--line-strong); border:1.5px solid var(--line-strong);
 }
 .bento-cell{background:var(--paper); padding:30px;}
 .bento-cell.featured{background:var(--paper-2);}
-.bento-craft{grid-area:craft;} .bento-product{grid-area:product;}
+.bento-craft{grid-area:craft;}
+.bento-ai{grid-area:ai;} .bento-product{grid-area:product;}
 .bento-stat{grid-area:stat; display:flex; flex-direction:column; justify-content:center;}
 .bento-research{grid-area:research;} .bento-technical{grid-area:technical;}
-.bento-now{grid-area:now; display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+.bento-now{grid-area:now; display:flex; align-items:center; gap:16px;}
+.bento-now > div{flex:1 1 0; min-width:0;}
 @media (max-width:900px){
-  .bento{grid-template-columns:1fr; grid-template-areas:"craft" "product" "stat" "research" "technical" "now";}
+  .bento{grid-template-columns:1fr; grid-template-areas:"craft" "ai" "product" "research" "technical" "stat" "now";}
 }
 .bento-cell ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;}
 .bento-cell li{font-size:0.95rem; color:var(--ink-soft);}
@@ -762,7 +764,7 @@ section:last-of-type{border-bottom:none;}
 /* ---------- EXPERIENCE TIMELINE ---------- */
 .timeline{margin-top:0;}
 .tl-item{
-  display:grid; grid-template-columns:170px 1fr 140px; gap:24px;
+  display:grid; grid-template-columns:170px 1fr 165px; gap:24px;
   padding:26px 0; border-top:1px solid var(--line); align-items:baseline;
 }
 .tl-item:last-child{border-bottom:1px solid var(--line);}
@@ -830,6 +832,81 @@ footer.site-footer{
   html{scroll-behavior:auto;}
 }
 
+
+/* ---- AI practice ---- */
+#ai .ai-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px;
+  background:var(--line-strong); border:1.5px solid var(--line-strong);}
+#ai .ai-cell{background:var(--paper); padding:30px;}
+#ai .ai-cell h3{margin:0 0 12px; font-family:'Archivo',sans-serif; font-weight:800; font-size:1.05rem;}
+#ai .ai-cell p{margin:0; font-size:0.94rem; color:var(--ink-soft); line-height:1.6;}
+#ai .ai-cell .ai-k{display:block; margin-bottom:16px; font-family:'IBM Plex Mono',monospace;
+  font-size:10px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent);}
+#ai .ai-strip{display:flex; flex-wrap:wrap; gap:1.5px; margin-top:1.5px;
+  background:var(--line-strong); border:1.5px solid var(--line-strong); border-top:0;}
+#ai .ai-tool{flex:1 1 auto; background:var(--paper); padding:15px 20px; text-align:center;
+  font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
+#ai .ai-tool b{color:var(--ink); font-weight:500;}
+#ai .ai-note{margin:22px 0 0; font-size:0.9rem; color:var(--ink-soft); line-height:1.65; max-width:70ch;}
+@media (max-width:860px){ #ai .ai-grid{grid-template-columns:1fr;} }
+
+.tl-now{display:block; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:10px;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--accent);}
+.tl-now::before{content:''; display:inline-block; width:5px; height:5px; border-radius:50%;
+  background:var(--accent); margin-right:6px; vertical-align:1px;}
+@media (max-width:760px){ .tl-now{margin-top:4px;} }
+
+/* ---- capability visuals ---- */
+.cap-vis{margin-top:24px; padding-top:22px; border-top:1px solid var(--line);}
+.cap-vis .cv-k{display:block; margin-bottom:14px; font-family:'IBM Plex Mono',monospace;
+  font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);}
+
+/* token specimen */
+.spec-row{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px;}
+.spec-tok{flex:0 0 auto; width:52px;}
+.spec-tok i{display:block; height:30px; border:1px solid var(--line-strong);}
+.spec-tok b{display:block; margin-top:5px; font-family:'IBM Plex Mono',monospace;
+  font-size:8.5px; font-weight:400; color:var(--ink-faint); letter-spacing:.02em;}
+.spec-type{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:18px;}
+.spec-type span{font-family:'Archivo',sans-serif; font-weight:800; color:var(--ink); line-height:1;}
+.spec-comp{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+.sc-btn{font-family:'Inter',sans-serif; font-size:11px; padding:7px 15px; border-radius:999px;
+  background:var(--ink); color:var(--paper);}
+.sc-ghost{font-family:'Inter',sans-serif; font-size:11px; padding:6px 14px; border-radius:999px;
+  border:1px solid var(--line-strong); color:var(--ink);}
+.sc-field{flex:1 1 110px; min-width:90px; height:30px; border:1px solid var(--line-strong);
+  background:var(--paper); position:relative;}
+.sc-field::after{content:''; position:absolute; left:10px; top:12px; width:36px; height:5px;
+  background:var(--line);}
+.sc-sw{width:34px; height:19px; border-radius:999px; background:var(--accent); position:relative;}
+.sc-sw::after{content:''; position:absolute; top:3px; right:3px; width:13px; height:13px;
+  border-radius:50%; background:var(--paper);}
+
+/* pipeline + handoff diagrams */
+.cap-vis svg{display:block; width:100%; max-width:560px; height:auto;}
+.cap-vis .d-box{fill:var(--paper); stroke:var(--ink); stroke-width:1.5;}
+.cap-vis .d-box-2{fill:var(--paper-2); stroke:var(--ink); stroke-width:1.5;}
+.cap-vis .d-acc{fill:none; stroke:var(--accent); stroke-width:1.5;}
+.cap-vis .d-line{fill:none; stroke:var(--ink); stroke-width:1.5;}
+.cap-vis .d-dash{fill:none; stroke:var(--ink-faint); stroke-width:1.5; stroke-dasharray:3 3;}
+.cap-vis .d-t{font-family:'IBM Plex Mono',monospace; font-size:9px; fill:var(--ink);}
+.cap-vis .d-t-f{font-family:'IBM Plex Mono',monospace; font-size:8.5px; fill:var(--ink-faint);}
+.cap-vis .d-t-a{font-family:'IBM Plex Mono',monospace; font-size:8.5px; fill:var(--accent);}
+
+/* years rail */
+.yr-rail{margin-top:18px;}
+.yr-rail .yl{fill:none; stroke:var(--line-strong); stroke-width:1.5;}
+.yr-rail .yd{fill:var(--paper); stroke:var(--ink); stroke-width:1.5;}
+.yr-rail .yd-now{fill:var(--accent); stroke:var(--accent);}
+.yr-rail text{font-family:'IBM Plex Mono',monospace; font-size:8.5px; fill:var(--ink-faint);}
+.bento-stat{justify-content:flex-start;}
+
+
+/* ---- capability icons ---- */
+.cap-ic{display:block; width:40px; height:40px; margin-bottom:22px; fill:none;
+  stroke:var(--ink); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round;}
+.cap-ic .ic-a{stroke:var(--accent);}
+.bento-stat{justify-content:flex-start;}
+.bento-stat .cap-ic{margin-bottom:18px;}
 </style>
 </head>
 <body>
@@ -842,6 +919,7 @@ footer.site-footer{
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="work.html">Work</a>
+      <a href="index.html#ai">AI practice</a>
       <a href="index.html#capabilities">Capabilities</a>
       <a href="index.html#hobbies">Beyond work</a>
       <a href="index.html#contact">Contact</a>
@@ -856,12 +934,12 @@ footer.site-footer{
   <section class="hero" id="top" style="border-bottom:1.5px solid var(--line-strong); padding-bottom:56px;">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Senior UX/UI Design Lead</div>
-        <h1 class="hero-title">Complex enterprise systems, made usable.</h1>
-        <p class="hero-sub">7+ years designing B2B platforms for HP, Ford, and the Salesforce ecosystem — turning complex enterprise workflows into products people can actually use.</p>
+        <div class="eyebrow">Staff-level Product Designer &middot; Enterprise B2B</div>
+        <h1 class="hero-title">Complex B2B portals, from zero to shipped.</h1>
+        <p class="hero-sub">7 years on dense, high-stakes B2B portals for HP, Ford and the Salesforce ecosystem. I work directly with the client &mdash; pulling the requirements out of the business before anything gets designed &mdash; then take the product from an empty file to a shipped system, with AI in the loop at every stage.</p>
         <div class="hero-stats">
-          <div><strong>7+</strong><span>Years in enterprise UX</span></div>
-          <div><strong>7</strong><span>Companies shipped work for</span></div>
+          <div><strong>7</strong><span>Years in enterprise B2B</span></div>
+          <div><strong>2</strong><span>Design systems built from scratch</span></div>
           <div><strong>5</strong><span>Case studies</span></div>
         </div>
       </div>
@@ -1033,10 +1111,10 @@ footer.site-footer{
         </a>
         <a class="case-card" href="case-studies/n-zero.html">
           <div class="cc-top"><span class="cc-index">05</span><span class="cc-arrow">↗</span></div>
-          <span class="cc-meta">Case study</span>
-          <h3>N Zero</h3>
-          <p class="cc-desc">Full write-up coming soon.</p>
-          <div class="cc-tags"><span>Details to be added</span></div>
+          <span class="cc-meta">Sustainability SaaS — Fexle Services</span>
+          <h3>N Zero — Carbon Accounting &amp; Offset Platform</h3>
+          <p class="cc-desc">A self-serve carbon calculator and offset planner for Australian enterprise.</p>
+          <div class="cc-tags"><span>Sustainability</span><span>Data viz</span><span>B2B SaaS</span></div>
         </a>
         <a class="case-card" href="work.html">
           <div class="cc-top"><span class="cc-index">＋</span><span class="cc-arrow">↗</span></div>
@@ -1050,54 +1128,123 @@ footer.site-footer{
   </section>
 
   <!-- CAPABILITIES -->
+
+  <!-- AI PRACTICE -->
+  <section id="ai">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>AI moved where the work starts.</h2>
+        <p class="section-sub">It used to take a week to get something a stakeholder could click. Now it takes an afternoon &mdash; which changes what you spend the rest of the week arguing about.</p>
+      </div>
+      <div class="ai-grid reveal">
+        <div class="ai-cell">
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 7 L9 31 L16 24 L21 35 L25 33 L20 22 L30 22 Z"/><path d="M27 6 l3 -3 M32 11 h4 M31 15 l3 2" class="ic-a"/></svg>
+          <span class="ai-k">Explore</span>
+          <h3>Clickable before it is specified.</h3>
+          <p>I use Claude and Figma Make to put a working prototype in front of people while the brief is still soft. A stakeholder who can click through a flow gives you a different &mdash; and far more useful &mdash; kind of feedback than one reading a wireframe.</p>
+        </div>
+        <div class="ai-cell">
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="7" width="30" height="26" rx="2"/><path d="M5 14 h30"/><path d="M9 10.5 h1 M13 10.5 h1"/><rect x="11" y="19" width="8" height="8" class="ic-a"/><path d="M23 20 h7 M23 24 h7 M23 28 h4"/></svg>
+          <span class="ai-k">Build</span>
+          <h3>Design inside the real system.</h3>
+          <p>CC360 and EMS at HP are production Retool apps. Designing them means working in component logic and real data shapes, not static frames &mdash; so what I hand over is already close to what engineering ships.</p>
+        </div>
+        <div class="ai-cell">
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5 L35 12 L20 19 L5 12 Z" class="ic-a"/><path d="M5 19 L20 26 L35 19"/><path d="M5 26 L20 33 L35 26"/></svg>
+          <span class="ai-k">Scale</span>
+          <h3>Systems are the leverage.</h3>
+          <p>A design system is the only thing that scales compliance. I have built two from scratch and consumed mature ones &mdash; HP Veneer, Salesforce Lightning. The new question is whether a system survives contact with generated code, which makes documentation and constraints part of the component, not an afterthought.</p>
+        </div>
+      </div>
+      <div class="ai-strip reveal">
+        <span class="ai-tool"><b>Claude</b></span>
+        <span class="ai-tool"><b>ChatGPT</b></span>
+        <span class="ai-tool"><b>Figma Make</b></span>
+        <span class="ai-tool"><b>Figma AI</b></span>
+        <span class="ai-tool"><b>UX Pilot</b></span>
+        <span class="ai-tool"><b>Cursor</b></span>
+        <span class="ai-tool"><b>Retool</b></span>
+      </div>
+      <p class="ai-note reveal">The useful part is not that the tools are fast. It is that cheap prototypes let you be wrong early, in front of the client, when being wrong still costs nothing. The judgement about <em>what</em> to build is the part that does not get automated.</p>
+    </div>
+  </section>
+
   <section id="capabilities">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2>Systems thinking, applied across the product lifecycle.</h2>
+        <h2>What I own, end to end.</h2>
       </div>
       <div class="bento reveal">
         <div class="bento-cell bento-craft featured">
-          <div class="eyebrow" style="margin-bottom:20px;">Design craft</div>
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="5" width="13" height="13" rx="2"/><rect x="22" y="5" width="13" height="13" rx="2" class="ic-a"/><rect x="5" y="22" width="13" height="13" rx="2"/><rect x="22" y="22" width="13" height="13" rx="2"/></svg>
+          <div class="eyebrow" style="margin-bottom:20px;">Design systems</div>
           <ul>
-            <li>Figma & Adobe XD</li>
-            <li>Retool component logic</li>
-            <li>HP Veneer & Salesforce SLDS</li>
-            <li>Prototyping & information architecture</li>
-            <li>Design system governance</li>
+            <li>Two systems built from scratch &mdash; components, tokens, documentation and governance</li>
+            <li>Figma libraries with variants and tokens mapped one-to-one to production code</li>
+            <li>Accessibility built into the components, not audited on at the end</li>
+            <li>Adoption: onboarding teams, running contribution and review</li>
+            <li>Consumed mature systems too &mdash; HP Veneer, Salesforce Lightning</li>
+            <li>Zero-to-one product design: blank file to shipped system</li>
+            <li>Figma, Figma Make, Claude, Cursor</li>
+          </ul>
+        </div>
+        <div class="bento-cell bento-ai">
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 L23 16 L35 20 L23 24 L20 36 L17 24 L5 20 L17 16 Z" class="ic-a"/><path d="M32 4 v6 M29 7 h6"/></svg>
+          <div class="eyebrow" style="margin-bottom:18px;">Designing with &amp; for AI</div>
+          <ul>
+            <li>Interfaces for non-deterministic output &mdash; sources, confidence, and what the screen does when the model is wrong</li>
+            <li>Human-in-the-loop flows: review, approval and override points</li>
+            <li>Agentic tasks &mdash; progress, interruption and permission states</li>
+            <li>Prompt-driven prototyping &mdash; an idea to a clickable build in an afternoon</li>
+            <li>Design systems for AI surfaces: streaming, partial and empty states</li>
+            <li>Reference docs and constraint systems that steer AI-generated code toward the system instead of away from it</li>
+            <li>Figma-to-code handoff where the tokens survive the trip</li>
           </ul>
         </div>
         <div class="bento-cell bento-product">
-          <div class="eyebrow" style="margin-bottom:18px;">Product</div>
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14" cy="13" r="5"/><circle cx="27" cy="13" r="5"/><path d="M5 33 c0-6 4-10 9-10 s9 4 9 10"/><path d="M18 33 c0-6 4-10 9-10 s9 4 9 10" class="ic-a"/></svg>
+          <div class="eyebrow" style="margin-bottom:18px;">Client &amp; product</div>
           <ul>
-            <li>Product strategy & roadmapping</li>
-            <li>Feature prioritization</li>
+            <li>Requirements gathered first-hand from client stakeholders</li>
+            <li>Turning an open-ended brief into a scoped problem</li>
+            <li>Roadmap prioritised on usage data and observed user friction</li>
+            <li>Design direction across several products at once</li>
+            <li>Arguing the case for AI where it helps &mdash; and against it where it does not</li>
+            <li>Critique, review and mentoring &mdash; without direct reports</li>
             <li>Agile / Scrum delivery</li>
           </ul>
         </div>
         <div class="bento-cell bento-stat">
-          <span class="big-stat">7+</span>
-          <span>YEARS IN ENTERPRISE UX</span>
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="8" width="30" height="27" rx="2"/><path d="M5 16 h30"/><path d="M13 4 v8 M27 4 v8"/><rect x="11" y="22" width="6" height="6" class="ic-a"/></svg>
+          <span class="big-stat">7</span>
+          <span>YEARS IN ENTERPRISE B2B</span>
         </div>
         <div class="bento-cell bento-research">
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="17" cy="17" r="10"/><path d="M25 25 L35 35" class="ic-a"/><path d="M12 17 h10"/></svg>
           <div class="eyebrow" style="margin-bottom:18px;">Research</div>
           <ul>
-            <li>User interviews & usability testing</li>
-            <li>Task analysis · Google Analytics / Amplitude</li>
+            <li>User interviews &amp; usability testing</li>
+            <li>Defining the research approach when the brief is ambiguous</li>
+            <li>AI-assisted synthesis across interviews and tickets &mdash; every finding traced back to its source</li>
+            <li>Task analysis &middot; Google Analytics / Amplitude</li>
             <li>A/B testing</li>
           </ul>
         </div>
         <div class="bento-cell bento-technical">
-          <div class="eyebrow" style="margin-bottom:18px;">Technical</div>
+          <svg class="cap-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M14 11 L5 20 L14 29"/><path d="M26 11 L35 20 L26 29"/><path d="M23 8 L17 32" class="ic-a"/></svg>
+          <div class="eyebrow" style="margin-bottom:18px;">Design engineering</div>
           <ul>
-            <li>B.Tech Computer Science — reads and writes basic code</li>
-            <li>Designs inside component libraries (HP Veneer, Salesforce SLDS), not just mockups</li>
-            <li>HTML / CSS, frontend fluency</li>
+            <li>B.Tech Computer Science &mdash; reads code, and reviews front-end output against the system</li>
+            <li>HTML / CSS, frontend fluency &mdash; this site is hand-built</li>
+            <li>Retool component logic &mdash; design that ships as the real thing</li>
+            <li>Builds working prototypes with AI tooling, not just mockups</li>
+            <li>Writes and iterates prompts as part of the design spec</li>
             <li>Every project shipped to a live, working product</li>
           </ul>
         </div>
         <div class="bento-cell bento-now">
           <span class="now-dot"></span>
-          <div><span class="now-tag">Right now</span><p>Deepening my product management practice, and studying how high-performing teams run design critique.</p></div>
+          <div><span class="now-tag">Right now</span><p>Pushing how far AI tooling can carry the early, exploratory half of design &mdash; and deepening my product management practice.</p></div>
         </div>
       </div>
     </div>
@@ -1107,7 +1254,7 @@ footer.site-footer{
   <section id="hobbies">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2>Away from the screen</h2>
+        <h2>Away from the screen.</h2>
         <p>Three things that keep the other half of my brain working.</p>
       </div>
       <div class="hobby-grid reveal">
@@ -1181,12 +1328,12 @@ footer.site-footer{
         <div class="tl-item">
           <div class="tl-date">Oct 2024 — Present</div>
           <div class="tl-role"><h3>Senior UX/UI Designer</h3><p>HP Inc. — asset management software, agent diagnostic tooling</p></div>
-          <div class="tl-loc">Contract</div>
+          <div class="tl-loc">Contingent worker<span class="tl-now">Current</span></div>
         </div>
         <div class="tl-item">
           <div class="tl-date">Oct 2024 — Present</div>
           <div class="tl-role"><h3>Senior UX/UI Designer</h3><p>Wipro Limited — Ford Pro Fleet Management CRM</p></div>
-          <div class="tl-loc">Contract</div>
+          <div class="tl-loc">Full-time<span class="tl-now">Current</span></div>
         </div>
         <div class="tl-item">
           <div class="tl-date">Mar 2021 — Sept 2024</div>
@@ -1214,7 +1361,7 @@ footer.site-footer{
         <div class="reveal">
           <div class="eyebrow">Contact</div>
           <h2>Let's talk about your product's hardest system.</h2>
-          <p class="hero-sub" style="font-size:1.05rem;">Currently based in New Delhi, open to senior design and product roles — on-site, hybrid, or remote.</p>
+          <p class="hero-sub" style="font-size:1.05rem;">Currently based in New Delhi, open to senior and staff product design roles &mdash; on-site, hybrid, or remote.</p>
         </div>
         <div class="reveal">
           <div class="contact-links">
