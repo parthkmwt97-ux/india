@@ -983,6 +983,22 @@ footer.site-footer{
   .nzx-rail{order:3; flex-basis:100%;}
   #nzx-show{display:none;}
 }
+
+/* ---- case-study vectors ---- */
+.sec-ic,.cs-ic{display:block; fill:none; stroke:var(--ink); stroke-width:1.6;
+  stroke-linecap:round; stroke-linejoin:round;}
+.sec-ic{width:34px; height:34px; margin-bottom:14px;}
+.cs-ic{width:30px; height:30px; margin-bottom:14px;}
+.sec-ic .ic-a,.cs-ic .ic-a{stroke:var(--accent);}
+.surf .cs-ic .ic-a{stroke:var(--sc, var(--accent));}
+.ia-col .cs-ic .ic-a{stroke:var(--cc, var(--accent));}
+.role-split > div > .cs-ic{margin-bottom:10px;}
+.bg-split{display:grid; grid-template-columns:minmax(0,1fr) 280px; gap:56px; align-items:center;}
+.bg-split .spot{margin:0; padding:22px; border:1.5px solid var(--line-strong); background:var(--paper-2);}
+.bg-split .spot svg{display:block; width:100%; height:auto; fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.bg-split .spot .sp-a{stroke:var(--accent);}
+.bg-split .spot .sp-d{stroke:var(--ink-faint); stroke-dasharray:3 4;}
+@media (max-width:860px){ .bg-split{grid-template-columns:1fr; gap:28px;} .bg-split .spot{max-width:340px;} }
 </style>
 </head>
 <body>
@@ -1031,26 +1047,34 @@ footer.site-footer{
     <div class="wrap">
 
     <div class="cs-block reveal">
+      <svg class="sec-ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="9" width="17" height="26"/><path d="M24 17 h9 v18 H24"/><path d="M12 15 h2 M17 15 h2 M12 21 h2 M17 21 h2 M12 27 h2 M17 27 h2" class="ic-a"/><path d="M4 35 h32"/></svg>
       <span class="sub-label">The client</span>
       <h2>Carbon credits, made implementable.</h2>
       <p class="cs-lede">N-Zero is a Sydney company building what it calls a <em>smarter carbon manager</em> &mdash; an AI and blockchain powered digital carbon markets advisor, manager and ESG reporting platform. Its premise is that most businesses now accept they need to act on emissions but have no practical route from intent to action: carbon credits are opaque, hard to evaluate, and easy to get wrong.</p>
       <p class="cs-lede">The platform&rsquo;s stated job is to make carbon credits simple, safe and implementable, through tailored advice, actionable strategies and impact-focused ESG reports. Four things sit underneath that:</p>
       <div class="nz-scope">
-        <div class="sc"><span class="sc-k">Pillar 01</span><h3>Tailored carbon advice</h3><p>An AI advisor assesses the company&rsquo;s climate goals and recommends compliance and voluntary carbon credits that fit its strategy.</p></div>
-        <div class="sc"><span class="sc-k">Pillar 02</span><h3>ESG dashboards &amp; reports</h3><p>Verified co-benefits tracked and reported &mdash; air quality, biodiversity protection of native vegetation, soil resilience.</p></div>
-        <div class="sc"><span class="sc-k">Pillar 03</span><h3>Buy, sell and retire credits</h3><p>A trading platform with trades, order books, bids and asks reported in real time.</p></div>
-        <div class="sc"><span class="sc-k">Pillar 04</span><h3>Quality scorecard</h3><p>Credits scored against additionality, non-overestimation, permanence, non double counting and no harm &mdash; a guard against greenwashing.</p></div>
+        <div class="sc"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 L23 16 L35 20 L23 24 L20 36 L17 24 L5 20 L17 16 Z" class="ic-a"/></svg><span class="sc-k">Pillar 01</span><h3>Tailored carbon advice</h3><p>An AI advisor assesses the company&rsquo;s climate goals and recommends compliance and voluntary carbon credits that fit its strategy.</p></div>
+        <div class="sc"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 35 H35"/><rect x="8" y="20" width="6" height="15"/><rect x="17" y="12" width="6" height="23" class="ic-a"/><rect x="26" y="24" width="6" height="11"/></svg><span class="sc-k">Pillar 02</span><h3>ESG dashboards &amp; reports</h3><p>Verified co-benefits tracked and reported &mdash; air quality, biodiversity protection of native vegetation, soil resilience.</p></div>
+        <div class="sc"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 13 h26 l-6-6"/><path d="M34 27 H8 l6 6" class="ic-a"/></svg><span class="sc-k">Pillar 03</span><h3>Buy, sell and retire credits</h3><p>A trading platform with trades, order books, bids and asks reported in real time.</p></div>
+        <div class="sc"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="16" r="11"/><path d="M15 16 l4 4 l7-7" class="ic-a"/><path d="M13 25 l-3 11 l10-4 l10 4 l-3-11"/></svg><span class="sc-k">Pillar 04</span><h3>Quality scorecard</h3><p>Credits scored against additionality, non-overestimation, permanence, non double counting and no harm &mdash; a guard against greenwashing.</p></div>
       </div>
     </div>
 
     <div class="cs-block reveal">
+      <svg class="sec-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5 L36 33 H4 Z"/><path d="M20 15 v8" class="ic-a"/><path d="M20 28 v.5" class="ic-a"/></svg>
       <span class="sub-label">The design problem</span>
       <h2>Two users in one seat.</h2>
-      <p class="cs-lede">N-Zero describes its flow in five steps: register, climate goals assessment, carbon credit portfolio analysis, climate advice and action, then monitor and manage. My work covered the middle of that &mdash; everything between a company signing up and holding a costed offset plan.</p>
+      <div class="bg-split">
+        <div>
+        <p class="cs-lede">N-Zero describes its flow in five steps: register, climate goals assessment, carbon credit portfolio analysis, climate advice and action, then monitor and manage. My work covered the middle of that &mdash; everything between a company signing up and holding a costed offset plan.</p>
       <p class="cs-lede">The difficulty is that those steps serve two different people. Establishing a baseline is operational work: someone who knows how many containers move through a port each year. Choosing and buying credits is financial and strategic work: someone thinking about budget, timeframe and disclosure. The platform had to carry one person from the first job to the second without the interface feeling like two products bolted together.</p>
-    </div>
+        </div>
+        <figure class="spot"><svg viewBox="0 0 260 180" role="img" aria-label="An operations user and a finance user working in one shared product"><circle cx="62" cy="40" r="14"/><path d="M36 92 c0-16 12-28 26-28 s26 12 26 28"/><circle class="sp-a" cx="198" cy="40" r="14"/><path class="sp-a" d="M172 92 c0-16 12-28 26-28 s26 12 26 28"/><rect x="46" y="100" width="32" height="18" rx="1"/><path d="M54 100 v18 M62 100 v18 M70 100 v18"/><ellipse class="sp-a" cx="198" cy="108" rx="12" ry="5"/><path class="sp-a" d="M186 108 v8 c0 3 5 5 12 5 s12-2 12-5 v-8"/><path class="sp-d" d="M62 124 C62 146 80 154 96 155 M198 126 C198 146 180 154 164 155"/><rect x="96" y="138" width="68" height="34" rx="3"/><path d="M96 148 H164"/><path class="sp-a" d="M104 158 h52"/></svg></figure>
+      </div>
+      </div>
 
     <div class="cs-block reveal">
+      <svg class="sec-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5 a15 15 0 1 0 0 30 c3 0 3-4 1-6 s0-6 4-6 h4 c4 0 6-3 6-6 C35 10 28 5 20 5 Z"/><circle cx="12" cy="18" r="2" class="ic-a"/><circle cx="17" cy="11" r="2"/><circle cx="25" cy="11" r="2" class="ic-a"/></svg>
       <span class="sub-label">Brand</span>
       <h2>Forest green on near-black.</h2>
       <p class="cs-lede">N-Zero&rsquo;s identity is a dot-matrix wordmark and a deep forest green &mdash; not the bright mint most carbon platforms reach for. The navigation runs near-black, warming into dark green at the foot of the rail, so the sidebar reads as a surface rather than a slab. Inside the calculator the green does one job and does it consistently: <b>filled green means a stage you have finished, mint means the stage you are on, grey means a stage you have not reached</b>. The tab bar is a progress meter that happens to be navigation.</p>
@@ -1064,6 +1088,7 @@ footer.site-footer{
     </div>
 
     <div class="cs-block reveal">
+      <svg class="sec-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 7 L9 31 L16 24 L21 35 L25 33 L20 22 L30 22 Z"/><path d="M27 6 l3 -3 M32 11 h4" class="ic-a"/></svg>
       <span class="sub-label">Working prototype</span>
       <h2>The report builds itself.</h2>
       <p class="cs-lede">Thirteen screens, and you drive them. The real buttons are live &mdash; <b>Login now</b>, <b>Next</b>, the calculator tabs, every stage in the bar &mdash; so the path from sign-in to a carbon credit portfolio is walked rather than described. Click anywhere else to flash every hotspot on the screen. Nothing is wired to a backend, so every figure is sample data.</p>
@@ -1106,32 +1131,35 @@ footer.site-footer{
     </div>
 
 <div class="cs-block reveal">
+      <svg class="sec-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 28 a14 14 0 1 1 28 0"/><path d="M20 28 L28 16" class="ic-a"/><circle cx="20" cy="28" r="2"/><path d="M6 34 h28"/></svg>
       <span class="sub-label">Baseline</span>
       <h2>Follow the goods, not the form.</h2>
       <p class="cs-lede">N-Zero&rsquo;s assessment step needs emission scopes and baselines before it can recommend anything. For an importer, that baseline lives in the supply chain &mdash; so instead of one long emissions form, the calculator walks the physical journey of the goods and asks about one leg at a time.</p>
       <div class="nz-steps">
-        <div class="nz-step"><span class="n">01</span><h3>At Port</h3><p>Containers offloaded per year, by TEU and FEU, with weight per container.</p></div>
-        <div class="nz-step"><span class="n">02</span><h3>Transit</h3><p>Road and rail movement from port inland.</p></div>
-        <div class="nz-step"><span class="n">03</span><h3>At Warehouse</h3><p>Storage, handling and facility emissions.</p></div>
-        <div class="nz-step"><span class="n">04</span><h3>Transfer</h3><p>Movement into the distribution network.</p></div>
-        <div class="nz-step"><span class="n">05</span><h3>Dist. Warehouse</h3><p>Final-leg storage and distribution.</p></div>
-        <div class="nz-step"><span class="n">06</span><h3>Summary</h3><p>Totals by process and by GHG scope.</p></div>
+        <div class="nz-step"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 25 h30 l-5 9 H10 Z"/><rect x="11" y="15" width="8" height="10"/><rect x="21" y="11" width="8" height="14" class="ic-a"/></svg><span class="n">01</span><h3>At Port</h3><p>Containers offloaded per year, by TEU and FEU, with weight per container.</p></div>
+        <div class="nz-step"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="11" width="20" height="16"/><path d="M24 17 h7 l5 6 v4 H24"/><circle cx="11" cy="30" r="3" class="ic-a"/><circle cx="29" cy="30" r="3" class="ic-a"/></svg><span class="n">02</span><h3>Transit</h3><p>Road and rail movement from port inland.</p></div>
+        <div class="nz-step"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 16 L20 6 L36 16 V35 H4 Z"/><rect x="12" y="22" width="16" height="13" class="ic-a"/><path d="M12 27 h16 M12 31 h16"/></svg><span class="n">03</span><h3>At Warehouse</h3><p>Storage, handling and facility emissions.</p></div>
+        <div class="nz-step"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 20 h28 l-7-7 M33 20 l-7 7" class="ic-a"/><circle cx="8" cy="20" r="3"/></svg><span class="n">04</span><h3>Transfer</h3><p>Movement into the distribution network.</p></div>
+        <div class="nz-step"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 L35 12 V28 L20 36 L5 28 V12 Z"/><path d="M5 12 L20 20 L35 12 M20 20 V36" class="ic-a"/></svg><span class="n">05</span><h3>Dist. Warehouse</h3><p>Final-leg storage and distribution.</p></div>
+        <div class="nz-step"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M30 8 H10 l10 12 l-10 12 h20" class="ic-a"/></svg><span class="n">06</span><h3>Summary</h3><p>Totals by process and by GHG scope.</p></div>
       </div>
       <p class="cs-lede" style="margin-top:22px;">Each stage shows its own result and a cumulative sub-total, so the number grows as the user works instead of appearing only at the end. The summary then splits the same total two ways: by process, for the operations side, and by Scope 1, 2 and 3, because that is the shape an ESG disclosure has to take. Neither group has to do the translation.</p>
     </div>
 
     <div class="cs-block reveal">
+      <svg class="sec-ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="10" cy="8" r="3"/><circle cx="10" cy="32" r="3"/><circle cx="30" cy="14" r="3" class="ic-a"/><path d="M10 11 v18"/><path d="M10 26 c0-8 20-4 20-9" class="ic-a"/></svg>
       <span class="sub-label">Design decisions</span>
       <h2>Four calls worth explaining.</h2>
       <div class="impact-grid">
-        <div class="impact-card"><span class="ic-label">Journey as navigation</span><p>Structuring the calculator around the path of the goods, rather than around emission categories, let users answer from operational knowledge they already had.</p></div>
-        <div class="impact-card"><span class="ic-label">Goal captured at sign-up</span><p>Offset target and timeframe are asked for during onboarding, so every later recommendation is measured against a number the company chose rather than presented as an open menu.</p></div>
-        <div class="impact-card"><span class="ic-label">Two readings of one total</span><p>Process and scope views side by side, serving the operations team and the reporting team from the same calculation.</p></div>
-        <div class="impact-card"><span class="ic-label">Options costed, not listed</span><p>Sequestration choices show capacity, annual CO&#8322; offset, average life and offset per unit, so the planner compares on effect and longevity instead of price alone.</p></div>
+        <div class="impact-card"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="9" cy="31" r="3"/><circle cx="31" cy="9" r="3" class="ic-a"/><path d="M12 31 h10 a5 5 0 0 0 0-10 h-6 a5 5 0 0 1 0-10 h12"/></svg><span class="ic-label">Journey as navigation</span><p>Structuring the calculator around the path of the goods, rather than around emission categories, let users answer from operational knowledge they already had.</p></div>
+        <div class="impact-card"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="8"/><circle cx="20" cy="20" r="2.5" class="ic-a"/></svg><span class="ic-label">Goal captured at sign-up</span><p>Offset target and timeframe are asked for during onboarding, so every later recommendation is measured against a number the company chose rather than presented as an open menu.</p></div>
+        <div class="impact-card"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14"/><path d="M20 6 v28"/><path d="M20 6 a14 14 0 0 1 0 28" class="ic-a"/></svg><span class="ic-label">Two readings of one total</span><p>Process and scope views side by side, serving the operations team and the reporting team from the same calculation.</p></div>
+        <div class="impact-card"><svg class="cs-ic" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="11" rx="12" ry="5"/><path d="M8 11 v9 c0 3 5 5 12 5 s12-2 12-5 v-9"/><path d="M8 20 v9 c0 3 5 5 12 5 s12-2 12-5 v-9" class="ic-a"/></svg><span class="ic-label">Options costed, not listed</span><p>Sequestration choices show capacity, annual CO&#8322; offset, average life and offset per unit, so the planner compares on effect and longevity instead of price alone.</p></div>
       </div>
     </div>
 
     <div class="cs-block reveal">
+      <svg class="sec-ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15"/><path d="M5 20 h30"/><path d="M20 5 c-6 6-6 24 0 30 c6-6 6-24 0-30" class="ic-a"/></svg>
       <span class="sub-label">N-Zero today</span>
       <h2>The product in market.</h2>
       <div class="nz-live">
