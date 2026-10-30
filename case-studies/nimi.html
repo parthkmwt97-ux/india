@@ -43,6 +43,7 @@ h1,h2,h3,h4{
   font-family:'Archivo', sans-serif;
   font-weight:800;
   letter-spacing:-0.015em;
+  line-height:1.12;
   margin:0;
   color:var(--ink);
 }
@@ -230,11 +231,11 @@ h1.hero-title{
 section{padding:88px 0; border-bottom:1.5px solid var(--line-strong);}
 section:last-of-type{border-bottom:none;}
 .section-head{
-  display:flex; justify-content:space-between; align-items:flex-end;
-  gap:24px; margin-bottom:56px; flex-wrap:wrap;
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap:20px 48px; margin-bottom:56px; flex-wrap:wrap;
 }
 .section-head h2{font-size:clamp(1.8rem, 3.4vw, 2.6rem); max-width:16ch;}
-.section-head p{color:var(--ink-soft); max-width:42ch; margin:0; font-size:1.02rem;}
+.section-head p{color:var(--ink-soft); max-width:42ch; margin:0; font-size:1.02rem; padding-top:7px;}
 
 /* ---------- FILTER TAGS (Work page) ---------- */
 .filter-bar{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:44px;}
@@ -1092,6 +1093,7 @@ footer.site-footer{
     <nav>
       <a href="../index.html">Home</a>
       <a href="../work.html" class="active">Work</a>
+      <a href="../index.html#ai">AI practice</a>
       <a href="../index.html#capabilities">Capabilities</a>
       <a href="../index.html#hobbies">Beyond work</a>
       <a href="../index.html#contact">Contact</a>

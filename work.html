@@ -43,6 +43,7 @@ h1,h2,h3,h4{
   font-family:'Archivo', sans-serif;
   font-weight:800;
   letter-spacing:-0.015em;
+  line-height:1.12;
   margin:0;
   color:var(--ink);
 }
@@ -230,11 +231,11 @@ h1.hero-title{
 section{padding:88px 0; border-bottom:1.5px solid var(--line-strong);}
 section:last-of-type{border-bottom:none;}
 .section-head{
-  display:flex; justify-content:space-between; align-items:flex-end;
-  gap:24px; margin-bottom:56px; flex-wrap:wrap;
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap:20px 48px; margin-bottom:56px; flex-wrap:wrap;
 }
 .section-head h2{font-size:clamp(1.8rem, 3.4vw, 2.6rem); max-width:16ch;}
-.section-head p{color:var(--ink-soft); max-width:42ch; margin:0; font-size:1.02rem;}
+.section-head p{color:var(--ink-soft); max-width:42ch; margin:0; font-size:1.02rem; padding-top:7px;}
 
 /* ---------- FILTER TAGS (Work page) ---------- */
 .filter-bar{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:44px;}
@@ -877,6 +878,7 @@ footer.site-footer{
     <nav>
       <a href="index.html">Home</a>
       <a href="work.html" class="active">Work</a>
+      <a href="index.html#ai">AI practice</a>
       <a href="index.html#capabilities">Capabilities</a>
       <a href="index.html#hobbies">Beyond work</a>
       <a href="index.html#contact">Contact</a>
@@ -894,7 +896,7 @@ footer.site-footer{
       <div class="work-summary">
         <div><strong>5</strong><span>Case studies</span></div>
         <div><strong>4</strong><span>Industries</span></div>
-        <div><strong>7+</strong><span>Years of work</span></div>
+        <div><strong>7</strong><span>Years of work</span></div>
       </div>
     </div>
   </section>
@@ -1054,7 +1056,7 @@ footer.site-footer{
           <span class="cc-status"><span class="st-dot"></span> In progress</span>
         </a>
 
-        <a class="case-card" href="case-studies/n-zero.html" data-tags="enterprise,mobility">
+        <a class="case-card" href="case-studies/n-zero.html" data-tags="enterprise,sustainability">
           <div class="cc-top"><span class="cc-index">05</span><span class="cc-arrow">↗</span></div>
           <div class="cc-art">
             <svg viewBox="0 0 150 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1066,11 +1068,11 @@ footer.site-footer{
               <path class="cc-stroke cc-faint" d="M14,78 L14,72 M74,78 L74,44 M138,78 L138,20"/>
             </svg>
           </div>
-          <span class="cc-meta">Case study</span>
-          <h3>N Zero</h3>
-          <p class="cc-desc">Write-up in progress — details coming soon.</p>
-          <div class="cc-tags"><span>Details to be added</span></div>
-          <span class="cc-status"><span class="st-dot"></span> In progress</span>
+          <span class="cc-meta">Sustainability SaaS — Fexle Services</span>
+          <h3>N Zero — Carbon Accounting &amp; Offset Platform</h3>
+          <p class="cc-desc">A self-serve carbon calculator and offset planner for Australian enterprise, structured around the journey of the goods rather than emission categories.</p>
+          <div class="cc-tags"><span>Sustainability</span><span>Data viz</span><span>B2B SaaS</span></div>
+          <span class="cc-status live"><span class="st-dot"></span> Full case study</span>
         </a>
 
         <div class="case-soon reveal">
